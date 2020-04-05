@@ -1,0 +1,18 @@
+<% @requests.each do |request| %>
+    
+
+    
+    <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p> <%=request.id%> </p>
+    <p> <%=request.title%> </p>
+    <p> <%=request.price%> </p>
+    <p> <%=request.contents%> </p>
+    <p> <%=request.genre%> </p> 
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<%end%>

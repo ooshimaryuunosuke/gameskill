@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Gameskill</title>
+    <title>ゲームズ</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,11 @@
   </head>
 
   <body>
+   <a href="/aplly">依頼をする </a>
+   <%= link_to '依頼を探す',requests_path %>
+   <a href="/title">ゲーム名から探す </a>
+   <a href="/genre">ジャンルから探す </a>
     <%= yield %>
   </body>
+
 </html>

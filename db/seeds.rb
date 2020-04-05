@@ -1,7 +1,11 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+user=User.create(name:"にだ",tel:"09012345678")
+user2=User.create(name:"なに",tel:"09012345678")
+Review.create(sentence:"gta",star:"5",contractor:user,client:user2)
+Review.create(sentence:"スマブラ",star:"4",contractor:user2,client:user)
+request=Request.create(title:"gta",contents:"teach",price:"1000points",genre:"PvP",user:user2)
+request2=Request.create(title:"スマブラ",contents:"teach",price:"2000points",genre:"PvP",user:user)
+request3=Request.create(title:"ストリートファイター",contents:"teach",price:"2000points",genre:"PvP",user:user)
+request4=Request.create(title:"鉄拳",contents:"teach",price:"3000points",genre:"PvP",user:user)
+Profile.create(playername:"なに",introduction:"梅カップ優勝経験あり",user:user)
+Profile.create(playername:"にだ",introduction:"竹カップ優勝経験あり",user:user2)
+Apply.create(guarantee:"3000points",request:request,user:user2)
