@@ -4,12 +4,23 @@
     <title>ゲームズ</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  
   </head>
 
   <body>
+  <% if user_signed_in? %>
+  <li>
+  <%= link_to('ログアウト', destroy_user_session_path, method: :delete) %>        
+  </li>
+<% else %>
+  <li>
+  <%= link_to('ログイン', new_user_session_path) %>  
+  </li>
+  <h1>ゲームズ</h1>
+<% end %>
    <a href="/aplly">依頼をする </a>
    <%= link_to '依頼を探す',requests_path %>
    <a href="/title">ゲーム名から探す </a>

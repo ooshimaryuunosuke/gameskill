@@ -1,0 +1,10 @@
+<div>
+<%= form_with(model: @request, local: true , action: 'create') do|form|%>
+<%=form.text_field :title%>
+<%=form.text_field :price%>
+<%=form.text_field :contents%>
+<%=form.text_field :genre%>
+<%=form.submit "Create" %>
+
+<%end%>
+<div>

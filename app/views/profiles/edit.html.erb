@@ -1,0 +1,11 @@
+<div>
+<%= form_with(model: @profile, local: true , action: 'update') do|form|%>
+<%=form.text_field :introduction%>
+<%=form.text_field :playername%>
+<%=form.text_field :twitter%>
+<%=form.submit "Update" %>
+
+<%end%>
+<div>
+
+
